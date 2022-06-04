@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../src/mask.js"></script>
+    <script src="../src/cep.js"></script>
+    <script src="../src/fonte.js"></script>
+    <title>Contato</title>
+
+</head>
+<body>
+    <header id="topo">
+        <div id="acessibilidade">
+            <ul id="atalhos">
+                <li><a href="#conteudo" accesskey="1" title="Ir para o conteúdo da página">Ir para o conteúdo [1]</a></li>
+                <li><a href="#menu" accesskey="2" title="Ir para o menu da página">Ir para o menu [2]</a></li>
+                <li><a href="#rodape" accesskey="3" title="Ir para o rodapé da página">Ir para o rodapé [3]</a></li>
+                <li id="pgacess"><a href="acessibilidade.html">Acessibilidade</a></li>
+                <li class="contraste"><a href="javascript:void(0);" id="contrasteOn">Contraste On</a></li>
+                <li class="contraste"><a href="javascript:void(0)" id="contrasteOff">Contraste Off</a></li>
+                <li class="fonte"><a href="javascript:void(0)" id="aumentar">A +</a></li>
+                <li class="fonte"><a href="javascript:void(0)" id="diminuir">A -</a></li>
+            </ul>
+        </div>
+        <a href="index.html" target="_blank" rel="noopener noreferrer">
+            <img id="logo" src="../assets/images/FATEC_ZONA_LESTE.png" alt="Logo FAtec Zona Leste nas cores cinza e vermelho">
+        </a>
+        <nav id="nav">
+            <label for="bt_menu"><img src="../assets/images/icon/menu.png" alt="burger menu"></label>
+            <input type="checkbox" id="bt_menu"><!-- menu responsivo -->
+           <ul id="menu">
+            
+               <li><a href="../index.html">Inicio</a></li>
+               <li><a href="comentarios.html">Comentários</a></li>
+               <li><a href="metadados.html">Metadados</a></li>
+               <li>
+                   <a href="listas.html">Listas</a>
+                   <ul>
+                       <li><a href="lista_ordenada.html">Lista Ordenada</a></li>
+                       <li><a href="lista_nao_ordenada.html">Lista Não Ordenada</a></li>
+                   </ul>
+                </li>
+                <li><a href="layout.html">Layout</a></li>
+                <li><a href="contato.html">Contato</a></li>
+           </ul> 
+        </nav>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+               <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <ul class="breadcrumb">
+            <li><a href="../index.html">Inicio</a></li>
+            <li>Contato</li>
+        </ul>
+    </header>
+    <main id="conteudo">
+        <h1 id="titulo">Fale Conosco</h1>
+        <!-- <form name="contato" id="contato" method="post"> -->
+        <form name="contato" id="contato">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <label for="nome" class="required">Nome: </label><br>
+                <input type="text" name="nome" id="nome" placeholder="Nome completo" required /><br>
+                <label for="data">Data de nascimento</label><br>
+                <input type="date" name="data" id="data" required><br>
+                <label for="cpf">CPF</label><br>
+                <input type="text" name="cpf" id="cpf" placeholder="xxx.xxx.xxx-xx" required><br>
+    <!-- Todo e qualquer campo de telefone coloca como não obrigatorio -->
+                <label for="telefone">Telefone</label><br>
+                <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx"><br>
+                <label for="email" class="required">E-mail</label><br>
+            </fieldset>
+             <fieldset>
+                    <legend>Dados de endereco</legend>
+                    <label for="cep">CEP</label><br>
+                    <input type="text" name="cep" id="cep" placeholder="xxxxx-xxx" required><br>
+                    <label for="logradouro">Rua/Avenida</label><br>
+                    <input type="text" name="logradouro" id="logradouro"><br>
+                    <label for="numero">Numero</label><br>
+                    <input type="number" name="numero" id="numero" required><br>
+                    <label for="complemento">Complemento</label><br>
+                    <input type="text" name="complemento" id="complemento" placeholder="Apto, Bloco, Casa..."><br>
+                    <label for="bairro">Bairro</label><br>
+                    <input type="text" name="bairro" id="bairro"><br>
+                    <label for="cidade">Cidade</label><br>
+                    <input type="text" name="cidade" id="cidade"><br>
+                    <label for="estado">Estado</label><br>
+                    <input type="text" name="estado" id="estado"><br>
+             </fieldset>
+             <fieldset>
+                    <legend>Dados da Mensage</legend>
+                    <label class="required" for="assunto">Assunto</label><br>
+                    <select name="assunto" id="assunto" required>
+                            <option value="" selected disabled>Selecione uma opção</option>
+                            <option value="elogio">Elogio</option>
+                            <option value="reclamacao">Reclamação</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="outro">Outro</option>
+                    </select><br>
+                    <label class="required" for="mensagem">Mensagem</label><br>
+                    <!-- Max length == limitar o numero de caracteres/ maxlength="250" -->
+                    <!-- Travar o resize da textarea usar o resize="none" -->
+                    <textarea rows="20" cols="09" name="mensagem" id="mensagem" required placeholder="Digite aqui sua mensagem!" ></textarea>
+                </fieldset>
+                <input type="submit" name="enviar"  id="enviar" value="Enviar"/>
+                <input type="reset" name="limpar" id="limpar" value="Limpar" />
+        </form>
+    </main>
+    <footer id="rodape">
+        <h2>Desenvolvido por Silas Leite</h2>
+        <h3>Todos os direitos reservado &copy; 2022.</h3>
+    </footer>
+</body>
+</html>

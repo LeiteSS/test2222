@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+    <script src="../src/fonte.js"></script>
+    <title>Listas</title>
+</head>
+<body>
+    <header id="topo">
+        <div id="acessibilidade">
+            <ul id="atalhos">
+                <li><a href="#conteudo" accesskey="1" title="Ir para o conteúdo da página">Ir para o conteúdo [1]</a></li>
+                <li><a href="#menu" accesskey="2" title="Ir para o menu da página">Ir para o menu [2]</a></li>
+                <li><a href="#rodape" accesskey="3" title="Ir para o rodapé da página">Ir para o rodapé [3]</a></li>
+                <li id="pgacess"><a href="acessibilidade.html">Acessibilidade</a></li>
+                <li class="contraste"><a href="javascript:void(0);" id="contrasteOn">Contraste On</a></li>
+                <li class="contraste"><a href="javascript:void(0)" id="contrasteOff">Contraste Off</a></li>
+                <li class="fonte"><a href="javascript:void(0)" id="aumentar">A +</a></li>
+                <li class="fonte"><a href="javascript:void(0)" id="diminuir">A -</a></li>
+            </ul>
+        </div>
+        <a href="index.html" target="_blank" rel="noopener noreferrer">
+            <img id="logo" src="../assets/images/FATEC_ZONA_LESTE.png" alt="Logo FAtec Zona Leste nas cores cinza e vermelho">
+        </a>
+        <nav id="nav">
+            <label for="bt_menu"><img src="../assets/images/icon/menu.png" alt="burger menu"></label>
+            <input type="checkbox" id="bt_menu"><!-- menu responsivo -->
+           <ul id="menu">
+            
+               <li><a href="../index.html">Inicio</a></li>
+               <li><a href="comentarios.html">Comentários</a></li>
+               <li><a href="metadados.html">Metadados</a></li>
+               <li>
+                   <a href="listas.html">Listas</a>
+                   <ul>
+                       <li><a href="lista_ordenada.html">Lista Ordenada</a></li>
+                       <li><a href="lista_nao_ordenada.html">Lista Não Ordenada</a></li>
+                   </ul>
+                </li>
+                <li><a href="layout.html">Layout</a></li>
+                <li><a href="contato.html">Contato</a></li>
+           </ul> 
+        </nav>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+               <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+        <ul class="breadcrumb">
+            <li><a href="../index.html">Inicio</a></li>
+            <li>Lista</li>
+        </ul>
+    </header>
+    <main id="conteudo">
+        <h1 id="titulo">Listas Html</h1>
+        <p class="paragrafo">
+            As listas HTML permitem que os desenvolvedores Web agrupem um conjunto 
+            de itens relacionados
+        </p>
+
+        <img id="imagem" src="../assets/images/listas.png" alt="A Imagem mostra um exemplo de lista não-ordenada e ordenada, respectivamente">
+    </main>
+    <footer id="rodape">
+        <h2>Desenvolvido por Silas Leite</h2>
+        <h3>Todos os direitos reservado &copy; 2022.</h3>
+    </footer>
+</body>
+</html>
